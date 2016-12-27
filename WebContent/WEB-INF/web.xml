@@ -14,7 +14,6 @@
     <init-param>
       <param-name>jersey.config.server.provider.packages</param-name>
       <param-value>api.controller,com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider</param-value>
-      
     </init-param>
   </servlet>
   <servlet-mapping>
