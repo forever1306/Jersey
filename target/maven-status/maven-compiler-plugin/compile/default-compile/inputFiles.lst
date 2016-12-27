@@ -1,2 +1,5 @@
+/Users/Minh/Documents/workspace/TestApi/src/main/java/api/entity/CoreContent.java
+/Users/Minh/Documents/workspace/TestApi/src/main/java/api/service/CoreContentService.java
 /Users/Minh/Documents/workspace/TestApi/src/main/java/api/controller/APIController.java
-/Users/Minh/Documents/workspace/TestApi/src/main/java/api/entity/Student.java
+/Users/Minh/Documents/workspace/TestApi/src/main/java/api/repository/AbstractRepository.java
+/Users/Minh/Documents/workspace/TestApi/src/main/java/api/repository/CoreContentRepository.java

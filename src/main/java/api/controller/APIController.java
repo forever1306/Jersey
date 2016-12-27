@@ -1,23 +1,24 @@
 package api.controller;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.ws.rs.GET;
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
-import javax.ws.rs.core.Context;
-import javax.ws.rs.core.MediaType;
+import java.util.List;
 
-import api.entity.Student;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
-@Path("/api")
+import api.entity.CoreContent;
+import api.service.CoreContentService;
+
+@Controller
 public class APIController {
+	@Autowired
+	private CoreContentService contentService;
 	
-	@POST
-	@Path("/test")
-	@Produces(MediaType.APPLICATION_JSON)
-	public Student getStudent(Student student,@Context HttpServletRequest http){
+	@RequestMapping("/api")
+	@ResponseBody
+	public List<CoreContent> getStudent(){
 		
-		return new Student();
+		return contentService.list();
 	}
 }
