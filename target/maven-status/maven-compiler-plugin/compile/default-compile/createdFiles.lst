@@ -1,0 +1,8 @@
+api/repository/CoreContentRepository.class
+api/repository/SpringWebContainerInitializer.class
+api/service/CoreContentService.class
+api/controller/APIController.class
+api/config/SpringBootApp.class
+api/config/SpringTransactionConfig.class
+api/entity/CoreContent.class
+api/repository/AbstractRepository.class
