@@ -14,12 +14,14 @@ public abstract class AbstractRepository<T> {
 	@Autowired
 	private SessionFactory sessionFactory;
 	
+	@SuppressWarnings("unchecked")
 	public Class<T> getPersistenClass() {
 		return ((Class<T>) ((ParameterizedType) this.getClass().getGenericSuperclass()).getActualTypeArguments()[0]);
 	}
 	
 	public List<T> list(){
 		Session session=sessionFactory.getCurrentSession();
+		@SuppressWarnings("unchecked")
 		List<T> list=session.createCriteria(getPersistenClass()).list();
 		return list;
 	}

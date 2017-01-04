@@ -15,7 +15,7 @@ public class APIController {
 	private CoreContentService contentService;
 	
 	@RequestMapping("/api")
-	public List<CoreContent> getStudent(){
+	public List<CoreContent> list(){
 		
 		return contentService.list();
 	}

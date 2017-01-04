@@ -5,7 +5,6 @@ import javax.servlet.ServletException;
 
 import org.springframework.core.annotation.Order;
 import org.springframework.web.WebApplicationInitializer;
-import org.springframework.web.context.ContextLoaderListener;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 
@@ -16,20 +15,20 @@ public class SpringWebContainerInitializer implements WebApplicationInitializer{
         registerContextLoaderListener(servletContext);
         
         // Set the Jersey used property to it won't load a ContextLoaderListener
-        servletContext.setInitParameter("contextConfigLocation", "");
+//        servletContext.setInitParameter("contextConfigLocation", "");
     }
     
     private void registerContextLoaderListener(ServletContext servletContext) {
-        WebApplicationContext webContext;
+        WebApplicationContext webContext=null;
 //        webContext = createWebAplicationContext(SpringAppConfiguration.class);
 //        servletContext.addListener(new ContextLoaderListener(webContext));
     }
     
     public WebApplicationContext createWebAplicationContext(Class... configClasses) {
-        AnnotationConfigWebApplicationContext context;
-        context = new AnnotationConfigWebApplicationContext();
-        context.getEnvironment().setActiveProfiles("production");
-        context.register(configClasses);
+        AnnotationConfigWebApplicationContext context=null;
+//        context = new AnnotationConfigWebApplicationContext();
+//        context.getEnvironment().setActiveProfiles("production");
+//        context.register(configClasses);
         return context;
     }
 }
